@@ -1,0 +1,47 @@
+.link {
+  color: #fff;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-family: "Roboto", Arial;
+  position: relative;
+  padding: 10px 0;
+}
+
+.link:after {
+  text-decoration: none;
+}
+
+.link.active .underline {
+  display: none;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: -10px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .link {
+    padding: 0;
+  }
+
+  .link.active .underline {
+    display: initial;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

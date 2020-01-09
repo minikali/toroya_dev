@@ -1,0 +1,154 @@
+/* Normal theme style */
+.carte-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000;
+  padding: 0 20px;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.carte-item p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.carte-item .item-name {
+  padding: 0 5px 0 0;
+}
+
+.carte-item .item-info,
+.carte-item .rolls-int,
+.carte-item .rolls-ext {
+  color: #999999;
+  font-style: oblique;
+  font-size: 10px;
+  margin-right: auto;
+}
+
+.carte-item .item-misc {
+  color: #999999;
+  white-space: nowrap;
+}
+
+.carte-item .item-price {
+  padding: 0 5px 0 10px;
+}
+
+.carte-item .item-name {
+  white-space: nowrap;
+}
+
+.carte-item .item-name,
+.carte-item .item-info {
+  text-align: left;
+}
+
+.carte-item .item-misc,
+.carte-item .item-price {
+  text-align: right;
+}
+
+.carte-item .item-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* Rolls theme style */
+.carte-item.rolls {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.carte-item.rolls .item-name {
+  width: 80%;
+}
+
+.carte-item.rolls .item-price {
+  width: 20%;
+}
+
+.carte-item.rolls .wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.carte-item.rolls .wrapper img {
+  width: 70%;
+  max-width: 200px;
+  margin-bottom: 5px;
+}
+
+.carte-item .rolls-int,
+.carte-item .rolls-ext {
+  display: none;
+}
+
+.carte-item.rolls .rolls-int,
+.carte-item.rolls .rolls-ext {
+  display: initial;
+  width: 100%;
+  text-align: center;
+}
+
+.carte-item.rolls .item-wrapper {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Normal theme style */
+  .carte-item {
+    font-size: 16px;
+  }
+
+  .carte-item .item-info,
+  .carte-item.rolls .rolls-int,
+  .carte-item.rolls .rolls-ext {
+    font-size: 14px;
+  }
+
+  /* Rolls theme style */
+  .carte-item.rolls {
+    width: 50%;
+    margin-bottom: 60px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
