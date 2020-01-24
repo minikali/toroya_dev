@@ -32,8 +32,8 @@ const ContactInfo = () => {
                 <img className="info-img" src={schedule} alt="Horaire" />
               </div>
               <div className="info-right">
-                <p className="info-item">Ouvert 7j/7 </p>
-                <p className="info-item">Fermé le dimanche midi</p>
+                <p className="info-item">Ouvert 6j/7 </p>
+                <p className="info-item">Fermé le dimanche</p>
                 <p className="info-item">Midi : 12h00 - 14h30</p>
                 <p className="info-item">Soir : 19h00 - 22h00</p>
               </div>
