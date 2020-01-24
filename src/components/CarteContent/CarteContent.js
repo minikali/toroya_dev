@@ -37,7 +37,10 @@ const CarteContent = props => {
           <div className="menu-lunch">
             <div className="menu-item">
               <h2>MATSURI SUSHI - 10,80 €</h2>
-              <p>8 california sake + 4 sushi</p>
+              <p>
+                Soupe miso
+                <br />8 california sake + 4 sushi
+              </p>
             </div>
             <div className="menu-item">
               <h2>TOROYA SUSHI - 13,80 €</h2>
@@ -67,7 +70,7 @@ const CarteContent = props => {
             <div className="menu-item">
               <h2>MENU DÉGUSTATION - 18 €</h2>
               <p>
-                Soupe Miso ou Salade de chou
+                Soupe Miso + Salade de chou
                 <br />
                 18 pièces : 1 sushi saumon, 1 sushi saumon cheese, 2 sushi thon,
                 6 maki saumon et 8 California saumon
@@ -76,7 +79,7 @@ const CarteContent = props => {
             <div className="menu-item">
               <h2>MENU DÉCOUVERTE - 32 €</h2>
               <p>
-                Soupe Miso ou Salade de chou
+                Soupe Miso + Salade de chou
                 <br />
                 30 pièces : 2 sushi saumon, 2 sushi saumon cheese, 2 sushi thon,
                 2 sushi saumon avocat, 6 maki thon, 6 maki saumon, 8 california
@@ -112,6 +115,7 @@ const CarteContent = props => {
               <CarteTitle title="ENTRÉES" />
               <div className="carte-container">
                 <div className="carte-wrapper">
+                  <CarteItem name="Soupe miso" price={3.2} />
                   <CarteItem name="Salade de choux" price={3.2} />
                   <CarteItem
                     name="Salade wakame"
@@ -123,13 +127,7 @@ const CarteContent = props => {
                     info="choux, saumon frais"
                     price={5.2}
                   />
-                  <CarteItem
-                    name="Salade Toroya"
-                    info="choux, ananas, crevettes"
-                    price={5.2}
-                  />
                   <CarteItem name="Edamame" info="fèves de soja" price={3.9} />
-                  <CarteItem name="Soupe miso" price={3.2} />
                 </div>
                 <CarteImg src={saladeChou} alt="Salade de Choux" />
               </div>
@@ -140,9 +138,6 @@ const CarteContent = props => {
               <CarteTitle title="HORS D’ŒUVRES" />
               <div className="carte-container reverse">
                 <div className="carte-wrapper">
-                  <CarteItem name="Riz nature parfumé " price={2.1} />
-                  <CarteItem name="Riz vinaigré" price={2.8} />
-                  <CarteItem name="Riz sauté maison" price={4.1} />
                   <CarteItem name="Nouilles sautées au poulet" price={10.9} />
                   <CarteItem
                     name="Nouilles sautées aux fruits de mer"
@@ -163,7 +158,24 @@ const CarteContent = props => {
               </div>
             </CarteItems>
           </div>
+          <div className="carte-section">
+            <CarteItems>
+              <CarteTitle title="RIZ" />
+              <div className="carte-container center">
+                <div className="carte-wrapper">
+                  <CarteItem name="Riz nature parfumé " price={2.1} />
+                  <CarteItem name="Riz vinaigré" price={2.8} />
+                  <CarteItem
+                    name="Riz sauté maison"
+                    info="riz, champignon de Paris, surimi,  poireaux, œufs"
+                    price={4.1}
+                  />
+                </div>
+              </div>
+            </CarteItems>
+          </div>
         </li>
+        {/* TOROYA ROLLS */}
         <li className={`page${menuIndex[2] ? " show" : ""}`}>
           <div className="carte-section rolls">
             <CarteItems>
@@ -240,38 +252,8 @@ const CarteContent = props => {
             </CarteItems>
           </div>
         </li>
-        {/* SUSHI, MAKI, SASHIMI, TEMAKI */}
+        {/* MAKI, CALIFORNIA */}
         <li className={`page${menuIndex[3] ? " show" : ""}`}>
-          <div className="carte-section">
-            <CarteItems>
-              <CarteTitle title="NIGIRI SUSHI" subtitle="par paire" />
-              <div className="carte-container">
-                <div className="carte-wrapper">
-                  <CarteItem name="Sake sushi" info="saumon" price={3.9} />
-                  <CarteItem name="Saumon braisé sushi" price={4.5} />
-                  <CarteItem
-                    name="Maguro sushi"
-                    info="thon rouge"
-                    price={5.4}
-                  />
-                  <CarteItem name="Tai sushi" info="daurade" price={4.5} />
-                  <CarteItem name="Ebi sushi" info="crevette" price={4.5} />
-                  <CarteItem name="Ikura" info=" œufs de saumon" price={4.9} />
-                  <CarteItem
-                    name="Saba"
-                    info="maquereau cru et assaisonné"
-                    price={4.9}
-                  />
-                  <CarteItem
-                    name="Tako"
-                    info="poulpe cuit et assaisonné "
-                    price={4.9}
-                  />
-                </div>
-                <CarteImg src={sushi} alt="Sake sushi" />
-              </div>
-            </CarteItems>
-          </div>
           <div className="carte-section">
             <CarteItems>
               <CarteTitle title="MAKI" subtitle="6 pièces" />
@@ -307,8 +289,90 @@ const CarteContent = props => {
           </div>
           <div className="carte-section">
             <CarteItems>
-              <CarteTitle title="SASHIMI" subtitle="5 / 10 pièces" />
+              <CarteTitle title="CALIFORNIA" subtitle="8 pièces" />
+              <div className="carte-container center">
+                <div className="carte-wrapper">
+                  <CarteItem
+                    name="California sake"
+                    info=" saumon frais, avocat"
+                    price={6.8}
+                  />
+                  <CarteItem
+                    name="California maguro"
+                    info="thon frais, avocat"
+                    price={7.2}
+                  />
+                  <CarteItem
+                    name="California maki"
+                    info="surimi, avocat"
+                    price={6.2}
+                  />
+                  <CarteItem
+                    name="Dragon maki"
+                    info="saumon frais, concombre, avocat"
+                    price={8.9}
+                  />
+                  <CarteItem
+                    name="Green maki"
+                    info="foie gras, confiture de figue"
+                    price={9.9}
+                  />
+                  <CarteItem
+                    name="Cheese maki"
+                    info="saumon, fromage Philadelphia"
+                    price={7.4}
+                  />
+                  <CarteItem
+                    name="California tempura"
+                    info="tempura de saumon, avocat"
+                    price={7.4}
+                  />
+                  <CarteItem
+                    name="California Norwegian"
+                    info="saumon frais, algues vertes, avocat"
+                    price={9.2}
+                  />
+                </div>
+              </div>
+            </CarteItems>
+          </div>
+        </li>
+        {/* SUSHI, SASHIMI */}
+        <li className={`page${menuIndex[4] ? " show" : ""}`}>
+          <div className="carte-section">
+            <CarteItems>
+              <CarteTitle title="NIGIRI SUSHI" subtitle="par paire" />
               <div className="carte-container">
+                <div className="carte-wrapper">
+                  <CarteItem name="Sake sushi" info="saumon" price={3.9} />
+                  <CarteItem name="Saumon braisé sushi" price={4.5} />
+                  <CarteItem
+                    name="Maguro sushi"
+                    info="thon rouge"
+                    price={5.4}
+                  />
+                  <CarteItem name="Tai sushi" info="daurade" price={4.5} />
+                  <CarteItem name="Ebi sushi" info="crevette" price={4.5} />
+                  <CarteItem name="Ikura" info=" œufs de saumon" price={4.9} />
+                  <CarteItem
+                    name="Saba"
+                    info="maquereau cru et assaisonné"
+                    price={4.9}
+                  />
+                  <CarteItem
+                    name="Tako"
+                    info="poulpe cuit et assaisonné "
+                    price={4.9}
+                  />
+                </div>
+                <CarteImg src={sushi} alt="Sake sushi" />
+              </div>
+            </CarteItems>
+          </div>
+          <div className="carte-section">
+            <CarteItems>
+              <CarteTitle title="SASHIMI" subtitle="5 / 10 pièces" />
+              <div className="carte-container reverse">
                 <div className="carte-wrapper">
                   <CarteItem
                     name="Sake sashimi"
@@ -341,22 +405,8 @@ const CarteContent = props => {
             </CarteItems>
           </div>
         </li>
-        <li className={`page${menuIndex[4] ? " show" : ""}`}>
-          <div className="carte-section">
-            <CarteItems>
-              <CarteTitle
-                title="TEMAKI"
-                subtitle="Sushi en forme de cône - 1 pièce"
-              />
-              <div className="carte-container center">
-                <div className="carte-wrapper">
-                  <CarteItem name="Temaki Saumon" price={5.2} />
-                  <CarteItem name="Temaki Thon" price={5.4} />
-                  <CarteItem name="Temaki Crevette " price={4.9} />
-                </div>
-              </div>
-            </CarteItems>
-          </div>
+        {/* TEMPURA, YAKITORI */}
+        <li className={`page${menuIndex[5] ? " show" : ""}`}>
           <div className="carte-section">
             <CarteItems>
               <CarteTitle title="TEMPURA" />
@@ -418,7 +468,8 @@ const CarteContent = props => {
             </CarteItems>
           </div>
         </li>
-        <li className={`page${menuIndex[5] ? " show" : ""}`}>
+        {/* BOISSON */}
+        <li className={`page${menuIndex[6] ? " show" : ""}`}>
           <div className="carte-section">
             <CarteItems>
               <CarteTitle title="BOISSONS" />

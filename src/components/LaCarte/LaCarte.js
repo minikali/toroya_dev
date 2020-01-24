@@ -9,7 +9,7 @@ class LaCarte extends React.Component {
     super(props);
 
     this.state = {
-      menuIndex: [true, false, false, false, false, false]
+      menuIndex: [true, false, false, false, false, false, false]
     };
 
     this.menuIndexHandler = this.menuIndexHandler.bind(this);

@@ -1,18 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import underline from "../../assets/images/brush-underline.png";
-import useWindowDimensions from "../Utils/useWindowDimensions";
 import "./NavCarte.css";
 
-const getSlidesToShow = width => {
-  if (width < 576) return 2;
-  if (width < 768) return 3;
-  if (width < 992) return 4;
-  return 6;
-};
-
 const NavCarte = props => {
-  const { width } = useWindowDimensions();
   const { menuIndex } = props;
   return (
     <nav className="nav-carte">
@@ -56,9 +47,9 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
-          TOROYA ROLLS,
+          TOROYA
           <br />
-          CALIFORNIA
+          ROLLS
         </p>
         <div className={`wrapper ${!menuIndex[2] && "hide"}`}>
           <img src={underline} alt="brush underline" />
@@ -72,9 +63,9 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
-          SUSHI, MAKI,
+          MAKI,
           <br />
-          SASHIMI
+          CALIFORNIA
         </p>
         <div className={`wrapper ${!menuIndex[3] && "hide"}`}>
           <img src={underline} alt="brush underline" />
@@ -88,9 +79,9 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
-          TEMAKI, TEMPURA,
+          SUSHI,
           <br />
-          YAKITORI
+          SASHIMI
         </p>
         <div className={`wrapper ${!menuIndex[4] && "hide"}`}>
           <img src={underline} alt="brush underline" />
@@ -104,11 +95,27 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
+          TEMPURA,
+          <br />
+          YAKITORI
+        </p>
+        <div className={`wrapper ${!menuIndex[5] && "hide"}`}>
+          <img src={underline} alt="brush underline" />
+        </div>
+      </div>
+      <div
+        className="item"
+        onClick={() => props.menuIndexHandler(6)}
+        onKeyDown={() => props.menuIndexHandler(6)}
+        role="button"
+        tabIndex={0}
+      >
+        <p>
           BOISSONS,
           <br />
           DESSERTS
         </p>
-        <div className={`wrapper ${!menuIndex[5] && "hide"}`}>
+        <div className={`wrapper ${!menuIndex[6] && "hide"}`}>
           <img src={underline} alt="brush underline" />
         </div>
       </div>
