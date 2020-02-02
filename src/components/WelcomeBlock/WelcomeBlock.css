@@ -33,11 +33,7 @@
 
 .welcome-block > .container .wrapper,
 .welcome-block > .container .wrapper .animated {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 20px 0;
 }
