@@ -39,11 +39,8 @@ class WelcomeBlock extends React.Component {
     const hour = date.getHours();
     const min = date.getMinutes();
     let status = "";
-    if (day === "dimanche" && hour >= 19 && hour < 22) status = "ouvert";
-    else if (
-      day !== "dimanche" &&
-      ((hour >= 12 && hour < 14 && min < 30) || (hour >= 19 && hour < 22))
-    )
+    if (day === "dimanche") status = "fermé";
+    else if ((hour >= 12 && hour < 14 && min < 30) || (hour >= 19 && hour < 22))
       status = "ouvert";
     else status = "fermé";
     const time = `${hour < 10 ? `0${hour}` : hour}h${
@@ -65,14 +62,15 @@ class WelcomeBlock extends React.Component {
                   Restaurant japonais cuisine traditionnelle et contemporaine
                 </h2>
                 <p className="description">
-                  Découvrez notre ambiance chaleureuse, nous vous 
-                  proposons une cuisine japonaise à la fois traditionnelle, 
-                  contemporaine et savoureuse afin d&apos;éveiller vos papilles. 
-                  Sur place, à emporter ou en livraison, dégustez nos traditionnels 
-                  sushi, maki ou sashimi et découvrez nos plats signatures : 
-                  Toroya rolls. Envie de chaud ? Nous proposons également des yakitori 
-                  cuit à la plancha ou des nouilles sautées ! N&apos;hésitez plus et venez 
-                  découvrir une cuisine authentique où finesse rime avec gourmandise
+                  Découvrez notre ambiance chaleureuse, nous vous proposons une
+                  cuisine japonaise à la fois traditionnelle, contemporaine et
+                  savoureuse afin d&apos;éveiller vos papilles. Sur place, à
+                  emporter ou en livraison, dégustez nos traditionnels sushi,
+                  maki ou sashimi et découvrez nos plats signatures : Toroya
+                  rolls. Envie de chaud ? Nous proposons également des yakitori
+                  cuit à la plancha ou des nouilles sautées ! N&apos;hésitez
+                  plus et venez découvrir une cuisine authentique où finesse
+                  rime avec gourmandise
                   <img className="smiley" src={smiley} alt="smiley" />
                 </p>
                 <p className="schedule">
