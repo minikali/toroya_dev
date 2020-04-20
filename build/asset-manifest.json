@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.a709b513.chunk.css",
-    "main.js": "/static/js/main.be4fa78a.chunk.js",
-    "main.js.map": "/static/js/main.be4fa78a.chunk.js.map",
+    "main.css": "/static/css/main.441ac130.chunk.css",
+    "main.js": "/static/js/main.818c7234.chunk.js",
+    "main.js.map": "/static/js/main.818c7234.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a67a0862.js",
     "runtime-main.js.map": "/static/js/runtime-main.a67a0862.js.map",
-    "static/js/2.7e7459d4.chunk.js": "/static/js/2.7e7459d4.chunk.js",
-    "static/js/2.7e7459d4.chunk.js.map": "/static/js/2.7e7459d4.chunk.js.map",
+    "static/js/2.8f2d7764.chunk.js": "/static/js/2.8f2d7764.chunk.js",
+    "static/js/2.8f2d7764.chunk.js.map": "/static/js/2.8f2d7764.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8399989d27b4c1df9c5e1075d3e5c572.js": "/precache-manifest.8399989d27b4c1df9c5e1075d3e5c572.js",
+    "precache-manifest.1211db80be4954a65b02ba12ea7648e4.js": "/precache-manifest.1211db80be4954a65b02ba12ea7648e4.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.a709b513.chunk.css.map": "/static/css/main.a709b513.chunk.css.map",
+    "static/css/main.441ac130.chunk.css.map": "/static/css/main.441ac130.chunk.css.map",
     "static/media/california-rolls-icon.png": "/static/media/california-rolls-icon.f6d5f91e.png",
     "static/media/crunchy-roll.png": "/static/media/crunchy-roll.020bc95a.png",
     "static/media/dragon-roll.png": "/static/media/dragon-roll.66599e12.png",
@@ -38,8 +38,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a67a0862.js",
-    "static/js/2.7e7459d4.chunk.js",
-    "static/css/main.a709b513.chunk.css",
-    "static/js/main.be4fa78a.chunk.js"
+    "static/js/2.8f2d7764.chunk.js",
+    "static/css/main.441ac130.chunk.css",
+    "static/js/main.818c7234.chunk.js"
   ]
 }
