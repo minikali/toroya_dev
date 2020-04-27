@@ -32,27 +32,92 @@
 }
 
 .carte-content .page .menu-lunch {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  border: 4px solid #dfb66b;
+  border-radius: 20px;
+  padding: 20px 0 0 0;
+  margin: 15px 10px;
+  position: relative;
+}
+
+.carte-content .page .menu-lunch .title {
+  font-family: "MontserratAlternates", Arial, Helvetica, sans-serif;
+  color: #dfb66b;
+  font-size: 20px;
+  text-align: center;
+  width: 200px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+.carte-content .page .menu-lunch .wrapper {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.carte-content .page .menu-lunch .wrapper .menu-item .left,
+.carte-content .page .menu-lunch .menu-item .left {
+  width: 40%;
+}
+
+.carte-content .page .menu-lunch .wrapper .menu-item .right,
+.carte-content .page .menu-lunch .menu-item .right {
+  width: 60%;
 }
 
 .carte-content .page .menu-item {
-  margin-top: 10px;
+  display: flex;
+  width: initial;
+  justify-content: center;
+  margin: 5px 0;
 }
 
-.carte-content .page .menu-item h2,
-.carte-content .page .menu-item p {
+.carte-content .page .menu-lunch .menu-item {
   width: 100%;
-  text-align: center;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: normal;
+}
+
+.carte-content .page .menu-item .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 4px solid #dfb66b;
+}
+
+.carte-content .page .menu-item .left h2 {
+  font-family: "MontserratAlternates", Arial, Helvetica, sans-serif;
+  color: #dfb66b;
+  font-size: 16px;
+  text-align: right;
   padding: 0 10px;
-  margin: 0;
+  margin: 4px 0;
+}
+
+.carte-content .page .menu-item .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carte-content .page .menu-item .right p {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 12px;
+  text-align: left;
+  padding: 0 10px;
+  margin: 0px 0;
+  /* white-space: nowrap; */
+}
+
+.carte-content .page .menu-item .right p.bold {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .carte-content .page .menu-item h2 {
@@ -68,6 +133,46 @@
   font-size: 14px;
 }
 
+.carte-content .page .menu-dinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carte-content .page .menu-dinner .menu-item {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.carte-content .page .menu-dinner .menu-item > div {
+  width: 50%;
+}
+
+.carte-content .page .special {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.carte-content .page .special .menu-item {
+  align-self: center;
+}
+
+.carte-content .page .special .img-wrapper {
+  max-width: 200px;
+  padding: 0 20px;
+  order: 2;
+}
+
+.carte-content .page .special .img-wrapper img {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .page.show {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,7 +180,7 @@
 }
 
 .carte-content .container {
-  background-image: url("./../../assets/images/page-bg.png");
+  background-image: url("../../assets/images/page-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -129,33 +234,164 @@
   }
 
   .carte-content .page .menu-lunch {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
+    border: 4px solid #dfb66b;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px 30px;
+    position: relative;
+  }
+
+  .carte-content .page .menu-lunch .title {
+    font-family: "MontserratAlternates", Arial, Helvetica, sans-serif;
+    color: #dfb66b;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+  }
+
+  .carte-content .page .menu-lunch .wrapper {
+    display: flex;
     flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .carte-content .page .menu-lunch .wrapper .menu-item .left,
+  .carte-content .page .menu-lunch .menu-item .left {
+    width: initial;
+  }
+
+  .carte-content .page .menu-lunch .wrapper .menu-item .right,
+  .carte-content .page .menu-lunch .menu-item .right {
+    width: initial;
   }
 
   .carte-content .page .menu-item {
-    width: 50%;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
   }
 
-  .carte-content .page .menu-lunch .menu-item:first-child {
-    width: 100%;
+  .carte-content .page .menu-item .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 4px solid #dfb66b;
+  }
+
+  .carte-content .page .menu-item .left h2 {
+    font-family: "MontserratAlternates", Arial, Helvetica, sans-serif;
+    color: #dfb66b;
+    font-size: 18px;
+    text-align: right;
+    padding: 0 10px;
+    margin: 4px 0;
+  }
+
+  .carte-content .page .menu-item .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carte-content .page .menu-item .right p {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 14px;
+    text-align: left;
+    padding: 0 10px;
+    margin: 0px 0;
+    white-space: nowrap;
+  }
+
+  .carte-content .page .menu-item .right p.bold {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .carte-content .page .menu-item h2 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .carte-content .page .menu-item h2 span {
+    font-weight: normal;
+  }
+
+  .carte-content .page .menu-item p {
+    font-size: 14px;
   }
 
   .carte-content .page .menu-dinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carte-content .page .menu-dinner .menu-item {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .carte-content .page .menu-dinner .menu-item > div {
+    width: 50%;
+  }
+
+  .carte-content .page .special {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: initial;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+
+  .carte-content .page .special .menu-item {
+    align-self: center;
+  }
+
+  .carte-content .page .special .img-wrapper {
+    max-width: 250px;
+    padding: 0 20px;
+    order: initial;
+  }
+
+  .carte-content .page .special .img-wrapper img {
+    width: 100%;
+  }
+  /* .carte-content .page .menu-lunch {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  } */
+
+  /* .carte-content .page .menu-item {
+    width: 50%;
+    margin-top: 20px;
+  } */
+  /* 
+  .carte-content .page .menu-lunch .menu-item:first-child {
+    width: 100%;
+  } */
+
+  /* .carte-content .page .menu-dinner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-  }
+  } */
 
-  .carte-content .page .menu-dinner .menu-item {
+  /* .carte-content .page .menu-dinner .menu-item {
     width: 100%;
     padding: 0 25%;
   }
@@ -164,7 +400,7 @@
   .carte-content .page .menu-dinner .menu-item:nth-child(4) {
     width: 50%;
     padding: 0;
-  }
+  } */
 
   .carte-section {
     display: -webkit-box;

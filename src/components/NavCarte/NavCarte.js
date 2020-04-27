@@ -14,11 +14,7 @@ const NavCarte = props => {
         role="button"
         tabIndex={0}
       >
-        <p>
-          MENUS,
-          <br />
-          PLATEAUX
-        </p>
+        <p>MENUS</p>
         <div className={`wrapper ${!menuIndex[0] && "hide"}`}>
           <img src={underline} alt="brush underline" />
         </div>
@@ -31,9 +27,9 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
-          ENTRÉES,
+          PLATEAUX
           <br />
-          HORS D’ŒUVRES
+          SPÉCIAUX
         </p>
         <div className={`wrapper ${!menuIndex[1] && "hide"}`}>
           <img src={underline} alt="brush underline" />
@@ -47,9 +43,9 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
-          TOROYA
+          ENTRÉES,
           <br />
-          ROLLS
+          HORS D’ŒUVRES
         </p>
         <div className={`wrapper ${!menuIndex[2] && "hide"}`}>
           <img src={underline} alt="brush underline" />
@@ -63,9 +59,9 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
-          MAKI,
+          TOROYA
           <br />
-          CALIFORNIA
+          ROLLS
         </p>
         <div className={`wrapper ${!menuIndex[3] && "hide"}`}>
           <img src={underline} alt="brush underline" />
@@ -79,9 +75,9 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
-          SUSHI,
+          MAKI,
           <br />
-          SASHIMI
+          CALIFORNIA
         </p>
         <div className={`wrapper ${!menuIndex[4] && "hide"}`}>
           <img src={underline} alt="brush underline" />
@@ -95,9 +91,9 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
-          TEMPURA,
+          SUSHI,
           <br />
-          YAKITORI
+          SASHIMI
         </p>
         <div className={`wrapper ${!menuIndex[5] && "hide"}`}>
           <img src={underline} alt="brush underline" />
@@ -111,11 +107,27 @@ const NavCarte = props => {
         tabIndex={0}
       >
         <p>
+          TEMPURA,
+          <br />
+          YAKITORI
+        </p>
+        <div className={`wrapper ${!menuIndex[6] && "hide"}`}>
+          <img src={underline} alt="brush underline" />
+        </div>
+      </div>
+      <div
+        className="item"
+        onClick={() => props.menuIndexHandler(7)}
+        onKeyDown={() => props.menuIndexHandler(7)}
+        role="button"
+        tabIndex={0}
+      >
+        <p>
           BOISSONS,
           <br />
           DESSERTS
         </p>
-        <div className={`wrapper ${!menuIndex[6] && "hide"}`}>
+        <div className={`wrapper ${!menuIndex[7] && "hide"}`}>
           <img src={underline} alt="brush underline" />
         </div>
       </div>
@@ -124,7 +136,7 @@ const NavCarte = props => {
 };
 
 NavCarte.defaultProps = {
-  menuIndex: [true, false, false, false, false, false],
+  menuIndex: [true, false, false, false, false, false, false],
   menuIndexHandler: false
 };
 

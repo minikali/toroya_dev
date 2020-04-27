@@ -19,6 +19,10 @@ import maki from "../../assets/images/maki.png";
 import sashimi from "../../assets/images/sashimi.png";
 import tempura from "../../assets/images/tempura.png";
 import yakitori from "../../assets/images/yakitori.png";
+import makiBoat from "../../assets/images/maki-boat.png";
+import sushiBoat from "../../assets/images/sushi-boat.png";
+import sashimiBoat from "../../assets/images/sashimi-boat.png";
+import tokyoBoat from "../../assets/images/tokyo-boat.png";
 import "./CarteContent.css";
 
 // props to use for CarteItem depending on the theme
@@ -31,85 +35,195 @@ const CarteContent = props => {
   return (
     <div className="carte-content">
       <ul className="container">
-        {/* MENU, PLATEAUX */}
+        {/* MENU */}
         <li className={`page${menuIndex[0] ? " show" : ""}`}>
-          <HrTitle>Seulement le midi</HrTitle>
+          {/* <HrTitle>Seulement le midi</HrTitle> */}
           <div className="menu-lunch">
-            <div className="menu-item">
-              <h2>MATSURI SUSHI - 10,80 €</h2>
-              <p>
-                Soupe miso
-                <br />8 california sake + 4 sushi
-              </p>
+            <h2 className="title">MIDI SEULEMENT</h2>
+            <div className="wrapper">
+              <div className="menu-item">
+                <div className="left">
+                  <h2>
+                    MATSURI <br /> SUSHI
+                  </h2>
+                  <h2>10,80 €</h2>
+                </div>
+                <div className="right">
+                  <p className="bold">Soupe miso</p>
+                  <p className="bold">8 california sake</p>
+                  <p className="bold">4 sake sushi</p>
+                </div>
+              </div>
+              <div className="menu-item">
+                <div className="left">
+                  <h2>
+                    TOROYA <br /> SUSHI
+                  </h2>
+                  <h2>13,80 €</h2>
+                </div>
+                <div className="right">
+                  <p className="bold">Soupe miso</p>
+                  <p className="bold">Salade de chou</p>
+                  <p className="bold">Riz nature</p>
+                  <p className="bold">Assortiment de sushi</p>
+                  <p>6 maki, 4 sushi, 2 sashimi</p>
+                </div>
+              </div>
             </div>
-            <div className="menu-item">
-              <h2>TOROYA SUSHI - 13,80 €</h2>
-              <p>
-                Soupe miso + Salade de chou + Riz nature parfumé
-                <br />
-                Assortiment de sushi :
-                <br />
-                6 maki, 4 sushi, 2 sashimi
-                <br />
-              </p>
-            </div>
-            <div className="menu-item">
-              <h2>TOROYA YAKITORI - 13,80 €</h2>
-              <p>
-                Soupe miso + Salade de chou + Riz nature parfumé
-                <br />
-                Assortiment de 6 yakitori :
-                <br />
-                bœuf, bœuf au fromage, poulet, poisson, légumes
-                <br />
-              </p>
+            <div className="menu-item" style={{ width: "100%" }}>
+              <div className="left">
+                <h2>
+                  TOROYA <br /> YAKITORI
+                </h2>
+                <h2>13,80 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">Soupe miso</p>
+                <p className="bold">Salade de chou</p>
+                <p className="bold">Riz nature</p>
+                <p className="bold">Assortiment de 6 yakitori</p>
+                <p>bœuf, bœuf au fromage, poulet, poisson, légumes</p>
+              </div>
             </div>
           </div>
-          <HrTitle>Midi et soir</HrTitle>
           <div className="menu-dinner">
             <div className="menu-item">
-              <h2>MENU DÉGUSTATION - 18 €</h2>
-              <p>
-                Soupe Miso + Salade de chou
-                <br />
-                18 pièces : 1 sushi saumon, 1 sushi saumon cheese, 2 sushi thon,
-                6 maki saumon et 8 California saumon
-              </p>
+              <div className="left">
+                <h2>
+                  MENU <br /> DÉGUSTATION
+                </h2>
+                <h2>18 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">Soupe miso</p>
+                <p className="bold">Salade de chou</p>
+                <p className="bold">18 pièces</p>
+                <p>sushi: 1 saumon, 2 thon, 1 saumon cheese</p>
+                <p>maki: 6 saumon</p>
+                <p>8 california saumon</p>
+              </div>
             </div>
             <div className="menu-item">
-              <h2>MENU DÉCOUVERTE - 32 €</h2>
-              <p>
-                Soupe Miso + Salade de chou
-                <br />
-                30 pièces : 2 sushi saumon, 2 sushi saumon cheese, 2 sushi thon,
-                2 sushi saumon avocat, 6 maki thon, 6 maki saumon, 8 california
-                saumon, 1 sashimi thon et 1 sashimi saumon
-              </p>
+              <div className="left">
+                <h2>HANAMI</h2>
+                <h2>19,90 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">Soupe miso</p>
+                <p className="bold">Salade de chou</p>
+                <p className="bold">Riz nature</p>
+                <p className="bold">Assortiment de 7 brochettes</p>
+              </div>
             </div>
             <div className="menu-item">
-              <h2>SHOGUN - 24,90 €</h2>
-              <p>
-                Soupe miso + Salade de poisson + Riz nature parfumé
-                <br />
-                Assortiment de 6 maki, 5 sushi et 6 sashimi
-              </p>
+              <div className="left">
+                <h2>SHOGUN</h2>
+                <h2>24,90 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">Soupe miso</p>
+                <p className="bold">Salade de chou</p>
+                <p className="bold">Riz nature</p>
+                <p className="bold">
+                  Assortiment de 6 maki, 6 sushi, 6 sashimi
+                </p>
+              </div>
             </div>
             <div className="menu-item">
-              <h2>
-                TOKYO - 58 €<span> (2 pers.)</span>
-              </h2>
-              <p>
-                2 Soupes Miso ou 2 Salades de chou
-                <br />
-                2 Riz sautés maison
-                <br />
-                40 pièces : assortiment de sashimi, sushi et maki
-              </p>
+              <div className="left">
+                <h2>
+                  MENU <br /> DÉCOUVERTE
+                </h2>
+                <h2>32 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">Soupe miso</p>
+                <p className="bold">Salade de chou</p>
+                <p className="bold">32 pièces</p>
+                <p>sushi: 2 saumon, 2 thon, 2 saumon cheese</p>
+                <p>maki: 6 thon, 6 saumon</p>
+                <p>sashimi: 2 saumon, 2 thon</p>
+                <p>8 california saumon</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        {/* PLATEAUX */}
+        <li className={`page${menuIndex[1] ? " show" : ""}`}>
+          <div className="special">
+            <div className="img-wrapper">
+              <img src={makiBoat} alt="maki boat" />
+            </div>
+            <div className="menu-item">
+              <div className="left">
+                <h2>MAKI BOAT</h2>
+                <h2>20,90 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">Soupe miso</p>
+                <p className="bold">Salade de chou</p>
+                <p className="bold">Assortiment de 26 pièces</p>
+              </div>
+            </div>
+          </div>
+          <div className="special">
+            <div className="img-wrapper">
+              <img src={sushiBoat} alt="sushi boat" />
+            </div>
+            <div className="menu-item">
+              <div className="left">
+                <h2>SUSHI BOAT</h2>
+                <h2>21,90 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">Soupe miso</p>
+                <p className="bold">Salade de chou</p>
+                <p className="bold">Assortiment de 11 pièces</p>
+              </div>
+            </div>
+          </div>
+          <div className="special">
+            <div className="img-wrapper">
+              <img src={sashimiBoat} alt="sashimi boat" />
+            </div>
+            <div className="menu-item">
+              <div className="left">
+                <h2>
+                  SASHIMI <br /> BOAT
+                </h2>
+                <h2>24,90 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">Soupe miso</p>
+                <p className="bold">Salade de chou</p>
+                <p className="bold">Riz nature</p>
+                <p className="bold">Assortiment de 20 pièces</p>
+              </div>
+            </div>
+          </div>
+          <div className="special">
+            <div className="img-wrapper">
+              <img src={tokyoBoat} alt="tokyo boat" />
+            </div>
+            <div className="menu-item">
+              <div className="left">
+                <h2>
+                  TOKYO <br /> (2 pers.)
+                </h2>
+                <h2>58 €</h2>
+              </div>
+              <div className="right">
+                <p className="bold">2 Soupe miso</p>
+                <p className="bold">2 Salade de chou</p>
+                <p className="bold">2 Riz sautés maison</p>
+                <p className="bold">Assortiment de 40 pièces</p>
+                <p>sushi, maki, sashimi</p>
+              </div>
             </div>
           </div>
         </li>
         {/* ENTRÉES, HORS D’ŒUVRES */}
-        <li className={`page${menuIndex[1] ? " show" : ""}`}>
+        <li className={`page${menuIndex[2] ? " show" : ""}`}>
           <div className="carte-section">
             <CarteItems>
               <CarteTitle title="ENTRÉES" />
@@ -139,6 +253,7 @@ const CarteContent = props => {
               <div className="carte-container reverse">
                 <div className="carte-wrapper">
                   <CarteItem name="Nouilles sautées au poulet" price={10.9} />
+                  <CarteItem name="Nouilles sautées au bœuf" price={11.9} />
                   <CarteItem
                     name="Nouilles sautées aux fruits de mer"
                     price={13.5}
@@ -149,8 +264,8 @@ const CarteContent = props => {
                     price={14.9}
                   />
                   <CarteItem
-                    name="Pokeball"
-                    info="riz vinaigré , tartare de saumon, avocat, edamame, choux, concombre"
+                    name="pokébowl"
+                    info="riz vinaigré, mangue, tartare de saumon, avocat, edamame, choux, concombre"
                     price={13.9}
                   />
                 </div>
@@ -176,7 +291,7 @@ const CarteContent = props => {
           </div>
         </li>
         {/* TOROYA ROLLS */}
-        <li className={`page${menuIndex[2] ? " show" : ""}`}>
+        <li className={`page${menuIndex[3] ? " show" : ""}`}>
           <div className="carte-section rolls">
             <CarteItems>
               <CarteTitle title="TOROYA ROLLS" subtitle="10 pièces" />
@@ -253,7 +368,7 @@ const CarteContent = props => {
           </div>
         </li>
         {/* MAKI, CALIFORNIA */}
-        <li className={`page${menuIndex[3] ? " show" : ""}`}>
+        <li className={`page${menuIndex[4] ? " show" : ""}`}>
           <div className="carte-section">
             <CarteItems>
               <CarteTitle title="MAKI" subtitle="6 pièces" />
@@ -338,7 +453,7 @@ const CarteContent = props => {
           </div>
         </li>
         {/* SUSHI, SASHIMI */}
-        <li className={`page${menuIndex[4] ? " show" : ""}`}>
+        <li className={`page${menuIndex[5] ? " show" : ""}`}>
           <div className="carte-section">
             <CarteItems>
               <CarteTitle title="NIGIRI SUSHI" subtitle="par paire" />
@@ -359,11 +474,6 @@ const CarteContent = props => {
                     info="maquereau cru et assaisonné"
                     price={4.9}
                   />
-                  <CarteItem
-                    name="Tako"
-                    info="poulpe cuit et assaisonné "
-                    price={4.9}
-                  />
                 </div>
                 <CarteImg src={sushi} alt="Sake sushi" />
               </div>
@@ -377,27 +487,22 @@ const CarteContent = props => {
                   <CarteItem
                     name="Sake sashimi"
                     info="saumon frais"
-                    price={[6.9, 11.9]}
+                    price={[6.4, 11.9]}
                   />
                   <CarteItem
                     name="Maguro sashimi"
                     info="thon rouge frais"
-                    price={[7.9, 13.9]}
+                    price={[7.4, 13.9]}
                   />
                   <CarteItem
                     name="Tai sashimi"
                     info="daurade royale"
-                    price={[6.9, 11.9]}
+                    price={[6.4, 11.9]}
                   />
                   <CarteItem
                     name="Saba sashimi"
                     info="maquereau cru et assaisonné"
-                    price={[6.5, 10.9]}
-                  />
-                  <CarteItem
-                    name="Tako sashimi"
-                    info="poulpe cuit et assaisonné"
-                    price={[6.5, 10.9]}
+                    price={[6.4, 10.9]}
                   />
                 </div>
                 <CarteImg src={sashimi} alt="Sake sashimi" />
@@ -406,7 +511,7 @@ const CarteContent = props => {
           </div>
         </li>
         {/* TEMPURA, YAKITORI */}
-        <li className={`page${menuIndex[5] ? " show" : ""}`}>
+        <li className={`page${menuIndex[6] ? " show" : ""}`}>
           <div className="carte-section">
             <CarteItems>
               <CarteTitle title="TEMPURA" />
@@ -451,10 +556,10 @@ const CarteContent = props => {
                   <CarteItem
                     name="Kinoko"
                     info="champignons de Paris"
-                    price={4.2}
+                    price={3.9}
                   />
-                  <CarteItem name="Zucchini" info="courgettes" price={4.2} />
-                  <CarteItem name="Nassu" info="aubergines" price={4.2} />
+                  <CarteItem name="Zucchini" info="courgettes" price={3.9} />
+                  <CarteItem name="Nassu" info="aubergines" price={3.9} />
                   <h2 className="carte-subtitle">Viandes</h2>
                   <CarteItem name="Gyuniku" info="bœuf" price={5.8} />
                   <CarteItem name="Negima" info="poulet" price={5.4} />
@@ -469,7 +574,7 @@ const CarteContent = props => {
           </div>
         </li>
         {/* BOISSON */}
-        <li className={`page${menuIndex[6] ? " show" : ""}`}>
+        <li className={`page${menuIndex[7] ? " show" : ""}`}>
           <div className="carte-section">
             <CarteItems>
               <CarteTitle title="BOISSONS" />

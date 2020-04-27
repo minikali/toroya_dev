@@ -148,6 +148,35 @@
   align-items: center;
 }
 
+.welcome-block .home-footer .delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-block .home-footer .delivery p {
+  margin: 10px;
+  text-align: center;
+}
+
+.welcome-block .home-footer .delivery .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-block .home-footer .delivery .container img {
+  margin: 0 10px;
+  width: 60px;
+}
+
+.welcome-block .home-footer .phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .welcome-block .home-footer img {
   margin-left: 20px;
   display: -webkit-box;

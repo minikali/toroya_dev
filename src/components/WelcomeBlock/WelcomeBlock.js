@@ -5,6 +5,9 @@ import clock from "../../assets/images/clock-icon.png";
 import facebook from "../../assets/images/fb-icon.png";
 import instagram from "../../assets/images/insta-icon.png";
 import smiley from "../../assets/images/smiley.png";
+import uberEat from "../../assets/images/uber-eat.png";
+import justEat from "../../assets/images/just-eat.png";
+import deliveroo from "../../assets/images/deliveroo.png";
 import "./WelcomeBlock.css";
 
 class WelcomeBlock extends React.Component {
@@ -100,6 +103,14 @@ class WelcomeBlock extends React.Component {
                 >
                   <img src={instagram} alt="instagram" />
                 </a>
+              </div>
+              <div className="delivery">
+                <p>Faites-vous livré avec nos partenaires</p>
+                <div className="container">
+                  <img src={uberEat} alt="uberEat" />
+                  <img src={justEat} alt="justEat" />
+                  <img src={deliveroo} alt="deliveroo" />
+                </div>
               </div>
               <div className="phone">
                 Réservation et commande à emporter: <span>05 61 23 67 92</span>

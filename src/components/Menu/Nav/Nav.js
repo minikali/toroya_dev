@@ -71,6 +71,16 @@ class Nav extends React.Component {
                 <Link href={link.url} value={link.name} />
               </div>
             ))}
+            <div className="li">
+              <a
+                className="order-online"
+                href="https://toroya.byclickeat.fr/order"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Commander en ligne
+              </a>
+            </div>
           </div>
         </div>
       </nav>
